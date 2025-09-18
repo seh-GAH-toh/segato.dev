@@ -1,1 +1,0 @@
-import{j as o,o as t,c as s,k as c}from"./C4aR-lbb.js";const r={},n={class:"my-2 text-3xl font-bold"};function a(e,l){return t(),s("h2",n,[c(e.$slots,"default")])}const f=o(r,[["render",a]]);export{f as default};
