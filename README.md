@@ -1,0 +1,1 @@
+[![segato](.github/assets/lain.gif)](https://segato.dev/)
