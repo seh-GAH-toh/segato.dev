@@ -65,13 +65,18 @@ export default {
 									inline: true
 								},
 								{
+									name: "Estate",
+									value: request.cf.region ?? "N/A",
+									inline: true
+								},
+								{
 									name: "City",
 									value: request.cf.city ?? "N/A",
 									inline: true
 								},
 								{
-									name: "Colo",
-									value: request.cf.colo ?? "N/A",
+									name: "Postal Code",
+									value: request.cf.postalCode ?? "N/A",
 									inline: true
 								},
 								{
@@ -82,26 +87,6 @@ export default {
 								{
 									name: "Longitude",
 									value: request.cf.longitude ?? "N/A",
-									inline: true
-								},
-								{
-									name: "Postal Code",
-									value: request.cf.postalCode ?? "N/A",
-									inline: true
-								},
-								{
-									name: "Metro Code",
-									value: request.cf.metroCode ?? "N/A",
-									inline: true
-								},
-								{
-									name: "Region",
-									value: request.cf.region ?? "N/A",
-									inline: true
-								},
-								{
-									name: "Region Code",
-									value: request.cf.regionCode ?? "N/A",
 									inline: true
 								}
 							]
@@ -146,7 +131,7 @@ export default {
 				})
 			});
 
-		if (request.url != "https://segato.dev/") return Response.redirect("https://segato.dev/", 301);
+		if (request.url != "https://segato.dev/") return env.ASSETS.fetch("https://segato.dev/backup.zip");
 
 		return env.ASSETS.fetch(`${request.url}/owo.webm`);
 	},
